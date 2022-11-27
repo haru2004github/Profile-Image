@@ -61,6 +61,8 @@
     align-self: center;
 }
 .box .content{
+    transform: translateY(-120%);
+    opacity: 0.9;
     position:absolute;
     border: 3px solid #020931;
     width: 250px;
@@ -71,6 +73,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    z-index: 30;
     transition: 1s;
 }
 .content h3,h5{
@@ -103,11 +106,15 @@ button:hover{
 }
 img{
     width:100%;
-    filter: grayscale();
+    filter: grayscale(100%);
     object-fit: cover;
 }
 .box:hover .content{
-    z-index: 30;
+  
+    transform: translateY(0);
+}
+.box:hover img{
+    filter: grayscale(0);
 }
 @keyframes rotate {
     0%{
